@@ -1,0 +1,280 @@
+[debug] [2020-05-02T11:15:04.018Z] ----------------------------------------------------------------------
+[debug] [2020-05-02T11:15:04.020Z] Command:       /home/vagrant/.nvm/versions/node/v10.15.1/bin/node /home/vagrant/.nvm/versions/node/v10.15.1/bin/firebase serve
+[debug] [2020-05-02T11:15:04.021Z] CLI Version:   8.2.0
+[debug] [2020-05-02T11:15:04.021Z] Platform:      linux
+[debug] [2020-05-02T11:15:04.021Z] Node Version:  v10.15.1
+[debug] [2020-05-02T11:15:04.021Z] Time:          Sat May 02 2020 13:15:04 GMT+0200 (Central European Summer Time)
+[debug] [2020-05-02T11:15:04.021Z] ----------------------------------------------------------------------
+[debug] [2020-05-02T11:15:04.021Z] 
+[debug] [2020-05-02T11:15:04.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-02T11:15:04.029Z] > authorizing via signed-in user
+[debug] [2020-05-02T11:15:04.029Z] [iam] checking project locapp-c4de3 for permissions ["firebase.projects.get"]
+[debug] [2020-05-02T11:15:04.032Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/locapp-c4de3:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-02T11:15:04.824Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 02 May 2020 11:15:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=684","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-02T11:15:04.827Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/locapp-c4de3  
+ 
+[debug] [2020-05-02T11:15:05.056Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 02 May 2020 11:15:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from '/home/vagrant/projects/POC/locapp-back'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "/home/vagrant/projects/POC/locapp-back/functions" for Cloud Functions...
+[debug] [2020-05-02T11:15:05.146Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T11:15:05.147Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-02T11:15:05.148Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T11:15:05.149Z] [worker-~diagnostic~-ab9cbb36-9dc3-490b-ac45-5b78374e6818]: Assigning socketPath: /tmp/fire_emu_403.sock 
+[debug] [2020-05-02T11:15:05.150Z] [worker-~diagnostic~-ab9cbb36-9dc3-490b-ac45-5b78374e6818]: BUSY 
+[debug] [2020-05-02T11:15:05.476Z] [runtime-status] [403] Functions runtime initialized. {"cwd":"/home/vagrant/projects/POC/locapp-back/functions","node_version":"10.15.1"} 
+[debug] [2020-05-02T11:15:05.477Z] [runtime-status] [403] Disabled runtime features: undefined 
+[debug] [2020-05-02T11:15:05.480Z] [runtime-status] [403] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:15:05.481Z] [runtime-status] [403] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:15:05.487Z] [runtime-status] [403] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T11:15:05.527Z] [runtime-status] [403] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T11:15:05.528Z] [runtime-status] [403] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:15:05.529Z] [runtime-status] [403] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:15:05.529Z] [runtime-status] [403] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:15:05.529Z] [runtime-status] [403] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-02T11:15:05.589Z] [runtime-status] [403] config() parent accessed! {"parentKey":"firebase","parentConfig":{}} 
+[debug] [2020-05-02T11:15:05.590Z] [runtime-status] [403] initializeApp(DEFAULT) {"databaseURL":"https://locapp-c4de3.firebaseio.com","storageBucket":"locapp-c4de3.appspot.com","projectId":"locapp-c4de3"} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] >  ====> Start decode token {"user":"====> Start decode token"}
+[info] >  ====> Token ok {"user":"====> Token ok"}
+[info] >  Prepare Apis {"user":"Prepare Apis"}
+[debug] [2020-05-02T11:15:05.881Z] Unsupported trigger: {"eventTrigger":{"resource":"projects/locapp-c4de3","eventType":"providers/firebase.auth/eventTypes/user.create","service":"firebaseauth.googleapis.com"},"name":"createUser","entryPoint":"createUser"} 
+[debug] [2020-05-02T11:15:05.881Z] Unsupported trigger: {"eventTrigger":{"resource":"projects/locapp-c4de3","eventType":"providers/firebase.auth/eventTypes/user.delete","service":"firebaseauth.googleapis.com"},"name":"deleteUser","entryPoint":"deleteUser"} 
+[info] ✔  functions[root]: http function initialized (http://localhost:5000/locapp-c4de3/us-central1/root).
+[info] i  functions[createUser]: function ignored because the auth emulator does not exist or is not running.
+[info] i  functions[deleteUser]: function ignored because the auth emulator does not exist or is not running.
+[debug] [2020-05-02T11:15:05.886Z] [worker-~diagnostic~-ab9cbb36-9dc3-490b-ac45-5b78374e6818]: IDLE 
+[debug] [2020-05-02T11:15:12.040Z] File /home/vagrant/projects/POC/locapp-back/functions/lib/Services/FirebaseService.js changed, reloading triggers 
+[debug] [2020-05-02T11:15:13.042Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-02T11:15:13.043Z] [worker-~diagnostic~-ab9cbb36-9dc3-490b-ac45-5b78374e6818]: FINISHING 
+[debug] [2020-05-02T11:15:13.054Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T11:15:13.055Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-02T11:15:13.055Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T11:15:13.055Z] [worker-~diagnostic~-2b6c5113-d092-4405-aa41-7cb739bd5543]: Assigning socketPath: /tmp/fire_emu_542.sock 
+[debug] [2020-05-02T11:15:13.056Z] [worker-~diagnostic~-2b6c5113-d092-4405-aa41-7cb739bd5543]: BUSY 
+[debug] [2020-05-02T11:15:13.058Z] [worker-~diagnostic~-ab9cbb36-9dc3-490b-ac45-5b78374e6818]: exited 
+[debug] [2020-05-02T11:15:13.058Z] [worker-~diagnostic~-ab9cbb36-9dc3-490b-ac45-5b78374e6818]: FINISHED 
+[debug] [2020-05-02T11:15:13.357Z] [runtime-status] [542] Functions runtime initialized. {"cwd":"/home/vagrant/projects/POC/locapp-back/functions","node_version":"10.15.1"} 
+[debug] [2020-05-02T11:15:13.359Z] [runtime-status] [542] Disabled runtime features: undefined 
+[debug] [2020-05-02T11:15:13.361Z] [runtime-status] [542] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:15:13.362Z] [runtime-status] [542] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:15:13.367Z] [runtime-status] [542] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T11:15:13.406Z] [runtime-status] [542] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T11:15:13.407Z] [runtime-status] [542] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:15:13.408Z] [runtime-status] [542] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:15:13.409Z] [runtime-status] [542] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:15:13.409Z] [runtime-status] [542] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-02T11:15:13.464Z] [runtime-status] [542] config() parent accessed! {"parentKey":"firebase","parentConfig":{}} 
+[debug] [2020-05-02T11:15:13.467Z] [runtime-status] [542] initializeApp(DEFAULT) {"databaseURL":"https://locapp-c4de3.firebaseio.com","storageBucket":"locapp-c4de3.appspot.com","projectId":"locapp-c4de3"} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] >  ====> Start decode token {"user":"====> Start decode token"}
+[info] >  ====> Token ok {"user":"====> Token ok"}
+[info] >  Prepare Apis {"user":"Prepare Apis"}
+[debug] [2020-05-02T11:15:13.773Z] [worker-~diagnostic~-2b6c5113-d092-4405-aa41-7cb739bd5543]: IDLE 
+[debug] [2020-05-02T11:16:09.874Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-02T11:16:09.874Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-02T11:16:09.875Z] Accepted request POST /locapp-c4de3/us-central1/root/baskets --> root
+[debug] [2020-05-02T11:16:09.875Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-02T11:16:09.885Z] [worker-pool] addWorker(root) 
+[debug] [2020-05-02T11:16:09.885Z] [worker-pool] Adding worker with key root, total=1 
+[debug] [2020-05-02T11:16:09.885Z] [worker-pool] submitWork(triggerId=root) 
+[debug] [2020-05-02T11:16:09.886Z] [worker-root-0a0b8eed-1da1-4df1-9051-d6738ca352b8]: Assigning socketPath: /tmp/fire_emu_1151.sock 
+[debug] [2020-05-02T11:16:09.886Z] [worker-root-0a0b8eed-1da1-4df1-9051-d6738ca352b8]: BUSY 
+[debug] [2020-05-02T11:16:10.215Z] [runtime-status] [1151] Functions runtime initialized. {"cwd":"/home/vagrant/projects/POC/locapp-back/functions","node_version":"10.15.1"} 
+[debug] [2020-05-02T11:16:10.218Z] [runtime-status] [1151] Disabled runtime features: undefined 
+[debug] [2020-05-02T11:16:10.223Z] [runtime-status] [1151] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:16:10.224Z] [runtime-status] [1151] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:16:10.232Z] [runtime-status] [1151] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T11:16:10.273Z] [runtime-status] [1151] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T11:16:10.274Z] [runtime-status] [1151] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:16:10.277Z] [runtime-status] [1151] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:16:10.277Z] [runtime-status] [1151] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:16:10.277Z] [runtime-status] [1151] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-02T11:16:10.337Z] [runtime-status] [1151] config() parent accessed! {"parentKey":"firebase","parentConfig":{}} 
+[debug] [2020-05-02T11:16:10.341Z] [runtime-status] [1151] initializeApp(DEFAULT) {"databaseURL":"https://locapp-c4de3.firebaseio.com","storageBucket":"locapp-c4de3.appspot.com","projectId":"locapp-c4de3"} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] >  ====> Start decode token {"user":"====> Start decode token"}
+[info] >  ====> Token ok {"user":"====> Token ok"}
+[info] >  Prepare Apis {"user":"Prepare Apis"}
+[debug] [2020-05-02T11:16:10.683Z] [runtime-status] [1151] Trigger "root" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "root"
+[debug] [2020-05-02T11:16:10.683Z] [runtime-status] [1151] triggerDefinition {"httpsTrigger":{},"name":"root","entryPoint":"root"} 
+[debug] [2020-05-02T11:16:10.683Z] [runtime-status] [1151] Running root in mode HTTPS 
+[debug] [2020-05-02T11:16:10.688Z] [runtime-status] [1151] Attempting to listen to socketPath: /tmp/fire_emu_1151.sock 
+[debug] [2020-05-02T11:16:10.693Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-02T11:16:10.728Z] [runtime-status] [1151] Ephemeral server handling POST request 
+[info] >  Try Decode token {"user":"Try Decode token"}
+[debug] [2020-05-02T11:16:10.780Z] [runtime-status] [1151] Ephemeral server survived. 
+[info] >  decodedToken {"name":"Mickael Poulhazan","picture":"https://lh3.googleusercontent.com/a-/AOh14GgWGUXBzo2LTBPjeiislsUyoNCj3LttHTeBD_XkKw","iss":"https://securetoken.google.com/locapp-c4de3","aud":"locapp-c4de3","auth_time":1587801852,"user_id":"JqjUXwUdhQQ3KxtZlHh585rh6OU2","sub":"JqjUXwUdhQQ3KxtZlHh585rh6OU2","iat":1588416707,"exp":1588420307,"email":"mickael.poulhazan@gmail.com","email_verified":true,"firebase":{"identities":{"google.com":["109641557156042866723"],"email":["mickael.poulhazan@gmail.com"]},"sign_in_provider":"google.com"},"uid":"JqjUXwUdhQQ3KxtZlHh585rh6OU2"} {"user":"decodedToken {\"name\":\"Mickael Poulhazan\",\"picture\":\"https://lh3.googleusercontent.com/a-/AOh14GgWGUXBzo2LTBPjeiislsUyoNCj3LttHTeBD_XkKw\",\"iss\":\"https://securetoken.google.com/locapp-c4de3\",\"aud\":\"locapp-c4de3\",\"auth_time\":1587801852,\"user_id\":\"JqjUXwUdhQQ3KxtZlHh585rh6OU2\",\"sub\":\"JqjUXwUdhQQ3KxtZlHh585rh6OU2\",\"iat\":1588416707,\"exp\":1588420307,\"email\":\"mickael.poulhazan@gmail.com\",\"email_verified\":true,\"firebase\":{\"identities\":{\"google.com\":[\"109641557156042866723\"],\"email\":[\"mickael.poulhazan@gmail.com\"]},\"sign_in_provider\":\"google.com\"},\"uid\":\"JqjUXwUdhQQ3KxtZlHh585rh6OU2\"}"}
+[info] >  End decode token {"user":"End decode token"}
+[info] >  ===> Add new basket {"user":"===> Add new basket"}
+[info] >  { {"user":"{"}
+[info] >      id: 1, {"user":"    id: 1,"}
+[info] >      title: "test", {"user":"    title: \"test\","}
+[info] >      decription: "Test description", {"user":"    decription: \"Test description\","}
+[info] >      image: null, {"user":"    image: null,"}
+[info] >      seller: "123", {"user":"    seller: \"123\","}
+[info] >      price: 12, {"user":"    price: 12,"}
+[info] >      priceBeforeReduction: 12, {"user":"    priceBeforeReduction: 12,"}
+[info] >      creationDate: 1588337895, {"user":"    creationDate: 1588337895,"}
+[info] >      collectStartDate: 1588337895, {"user":"    collectStartDate: 1588337895,"}
+[info] >      collectEndDate: 1588337895, {"user":"    collectEndDate: 1588337895,"}
+[info] >      collectCenter: null, {"user":"    collectCenter: null,"}
+[info] >      isOrganic: true, {"user":"    isOrganic: true,"}
+[info] >      isVeggie: true, {"user":"    isVeggie: true,"}
+[info] >      status: "available", {"user":"    status: \"available\","}
+[info] >      content: null {"user":"    content: null"}
+[info] >  } {"user":"}"}
+[info] >  { {"user":"{"}
+[info] >      id: 1, {"user":"    id: 1,"}
+[info] >      title: "test", {"user":"    title: \"test\","}
+[info] >      decription: "Test description", {"user":"    decription: \"Test description\","}
+[info] >      image: null, {"user":"    image: null,"}
+[info] >      seller: "123", {"user":"    seller: \"123\","}
+[info] >      price: 12, {"user":"    price: 12,"}
+[info] >      priceBeforeReduction: 12, {"user":"    priceBeforeReduction: 12,"}
+[info] >      creationDate: 1588337895, {"user":"    creationDate: 1588337895,"}
+[info] >      collectStartDate: 1588337895, {"user":"    collectStartDate: 1588337895,"}
+[info] >      collectEndDate: 1588337895, {"user":"    collectEndDate: 1588337895,"}
+[info] >      collectCenter: null, {"user":"    collectCenter: null,"}
+[info] >      isOrganic: true, {"user":"    isOrganic: true,"}
+[info] >      isVeggie: true, {"user":"    isVeggie: true,"}
+[info] >      status: "available", {"user":"    status: \"available\","}
+[info] >      content: null {"user":"    content: null"}
+[info] >  } {"user":"}"}
+[warn] ⚠  External network resource requested!
+   - URL: "http://169.254.169.254/computeMetadata/v1/instance"
+ - Be careful, this may be a production service.
+[warn] ⚠  External network resource requested!
+   - URL: "http://metadata.google.internal./computeMetadata/v1/instance"
+ - Be careful, this may be a production service.
+[info] i  functions: Finished "root" in ~1s
+[debug] [2020-05-02T11:16:11.132Z] [worker-root-0a0b8eed-1da1-4df1-9051-d6738ca352b8]: IDLE 
+[debug] [2020-05-02T11:16:11.132Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  (node:1151) UnhandledPromiseRejectionWarning: ReferenceError: next is not defined {"user":"(node:1151) UnhandledPromiseRejectionWarning: ReferenceError: next is not defined"}
+[info] >      at ref.catch.error (/home/vagrant/projects/POC/locapp-back/functions/lib/Services/FirebaseService.js:62:17) {"user":"    at ref.catch.error (/home/vagrant/projects/POC/locapp-back/functions/lib/Services/FirebaseService.js:62:17)"}
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7) {"user":"    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+[info] >  (node:1151) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3) {"user":"(node:1151) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)"}
+[info] >  (node:1151) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code. {"user":"(node:1151) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code."}
+[debug] [2020-05-02T11:17:27.141Z] File /home/vagrant/projects/POC/locapp-back/functions/lib/Services/FirebaseService.js changed, reloading triggers 
+[debug] [2020-05-02T11:17:28.142Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-02T11:17:28.142Z] [worker-~diagnostic~-2b6c5113-d092-4405-aa41-7cb739bd5543]: FINISHING 
+[debug] [2020-05-02T11:17:28.142Z] [worker-pool] Shutting down IDLE worker (root) 
+[debug] [2020-05-02T11:17:28.142Z] [worker-root-0a0b8eed-1da1-4df1-9051-d6738ca352b8]: FINISHING 
+[debug] [2020-05-02T11:17:28.156Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-02T11:17:28.156Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-02T11:17:28.156Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-02T11:17:28.156Z] [worker-~diagnostic~-338f9e0f-051c-4251-8cc6-d40b66e4c4a4]: Assigning socketPath: /tmp/fire_emu_2140.sock 
+[debug] [2020-05-02T11:17:28.156Z] [worker-~diagnostic~-338f9e0f-051c-4251-8cc6-d40b66e4c4a4]: BUSY 
+[debug] [2020-05-02T11:17:28.157Z] [worker-~diagnostic~-2b6c5113-d092-4405-aa41-7cb739bd5543]: exited 
+[debug] [2020-05-02T11:17:28.157Z] [worker-~diagnostic~-2b6c5113-d092-4405-aa41-7cb739bd5543]: FINISHED 
+[debug] [2020-05-02T11:17:28.158Z] [worker-root-0a0b8eed-1da1-4df1-9051-d6738ca352b8]: exited 
+[debug] [2020-05-02T11:17:28.158Z] [worker-root-0a0b8eed-1da1-4df1-9051-d6738ca352b8]: FINISHED 
+[debug] [2020-05-02T11:17:28.576Z] [runtime-status] [2140] Functions runtime initialized. {"cwd":"/home/vagrant/projects/POC/locapp-back/functions","node_version":"10.15.1"} 
+[debug] [2020-05-02T11:17:28.583Z] [runtime-status] [2140] Disabled runtime features: undefined 
+[debug] [2020-05-02T11:17:28.588Z] [runtime-status] [2140] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:17:28.591Z] [runtime-status] [2140] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:17:28.600Z] [runtime-status] [2140] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T11:17:28.643Z] [runtime-status] [2140] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T11:17:28.646Z] [runtime-status] [2140] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:17:28.649Z] [runtime-status] [2140] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:17:28.650Z] [runtime-status] [2140] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:17:28.650Z] [runtime-status] [2140] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-02T11:17:28.729Z] [runtime-status] [2140] config() parent accessed! {"parentKey":"firebase","parentConfig":{}} 
+[debug] [2020-05-02T11:17:28.732Z] [runtime-status] [2140] initializeApp(DEFAULT) {"databaseURL":"https://locapp-c4de3.firebaseio.com","storageBucket":"locapp-c4de3.appspot.com","projectId":"locapp-c4de3"} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] >  ====> Start decode token {"user":"====> Start decode token"}
+[info] >  ====> Token ok {"user":"====> Token ok"}
+[info] >  Prepare Apis {"user":"Prepare Apis"}
+[debug] [2020-05-02T11:17:29.005Z] [worker-~diagnostic~-338f9e0f-051c-4251-8cc6-d40b66e4c4a4]: IDLE 
+[debug] [2020-05-02T11:17:34.278Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-02T11:17:34.278Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-02T11:17:34.278Z] Accepted request POST /locapp-c4de3/us-central1/root/baskets --> root
+[debug] [2020-05-02T11:17:34.278Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-02T11:17:34.278Z] [worker-pool] Cleaned up workers for root: 1 --> 0 
+[debug] [2020-05-02T11:17:34.290Z] [worker-pool] addWorker(root) 
+[debug] [2020-05-02T11:17:34.290Z] [worker-pool] Adding worker with key root, total=1 
+[debug] [2020-05-02T11:17:34.290Z] [worker-pool] submitWork(triggerId=root) 
+[debug] [2020-05-02T11:17:34.291Z] [worker-root-83c0b181-393d-4bed-bac2-7d03aa0cbfbe]: Assigning socketPath: /tmp/fire_emu_2257.sock 
+[debug] [2020-05-02T11:17:34.291Z] [worker-root-83c0b181-393d-4bed-bac2-7d03aa0cbfbe]: BUSY 
+[debug] [2020-05-02T11:17:34.647Z] [runtime-status] [2257] Functions runtime initialized. {"cwd":"/home/vagrant/projects/POC/locapp-back/functions","node_version":"10.15.1"} 
+[debug] [2020-05-02T11:17:34.651Z] [runtime-status] [2257] Disabled runtime features: undefined 
+[debug] [2020-05-02T11:17:34.654Z] [runtime-status] [2257] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:17:34.657Z] [runtime-status] [2257] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:17:34.662Z] [runtime-status] [2257] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-02T11:17:34.703Z] [runtime-status] [2257] Checked functions.config() {"config":{}} 
+[debug] [2020-05-02T11:17:34.704Z] [runtime-status] [2257] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:17:34.705Z] [runtime-status] [2257] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-02T11:17:34.706Z] [runtime-status] [2257] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-02T11:17:34.707Z] [runtime-status] [2257] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/vagrant/projects/POC/locapp-back/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-02T11:17:34.774Z] [runtime-status] [2257] config() parent accessed! {"parentKey":"firebase","parentConfig":{}} 
+[debug] [2020-05-02T11:17:34.777Z] [runtime-status] [2257] initializeApp(DEFAULT) {"databaseURL":"https://locapp-c4de3.firebaseio.com","storageBucket":"locapp-c4de3.appspot.com","projectId":"locapp-c4de3"} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] >  ====> Start decode token {"user":"====> Start decode token"}
+[info] >  ====> Token ok {"user":"====> Token ok"}
+[info] >  Prepare Apis {"user":"Prepare Apis"}
+[debug] [2020-05-02T11:17:35.090Z] [runtime-status] [2257] Trigger "root" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "root"
+[debug] [2020-05-02T11:17:35.091Z] [runtime-status] [2257] triggerDefinition {"httpsTrigger":{},"name":"root","entryPoint":"root"} 
+[debug] [2020-05-02T11:17:35.091Z] [runtime-status] [2257] Running root in mode HTTPS 
+[debug] [2020-05-02T11:17:35.094Z] [runtime-status] [2257] Attempting to listen to socketPath: /tmp/fire_emu_2257.sock 
+[debug] [2020-05-02T11:17:35.098Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-02T11:17:35.122Z] [runtime-status] [2257] Ephemeral server handling POST request 
+[info] >  Try Decode token {"user":"Try Decode token"}
+[debug] [2020-05-02T11:17:35.173Z] [runtime-status] [2257] Ephemeral server survived. 
+[info] >  decodedToken {"name":"Mickael Poulhazan","picture":"https://lh3.googleusercontent.com/a-/AOh14GgWGUXBzo2LTBPjeiislsUyoNCj3LttHTeBD_XkKw","iss":"https://securetoken.google.com/locapp-c4de3","aud":"locapp-c4de3","auth_time":1587801852,"user_id":"JqjUXwUdhQQ3KxtZlHh585rh6OU2","sub":"JqjUXwUdhQQ3KxtZlHh585rh6OU2","iat":1588416707,"exp":1588420307,"email":"mickael.poulhazan@gmail.com","email_verified":true,"firebase":{"identities":{"google.com":["109641557156042866723"],"email":["mickael.poulhazan@gmail.com"]},"sign_in_provider":"google.com"},"uid":"JqjUXwUdhQQ3KxtZlHh585rh6OU2"} {"user":"decodedToken {\"name\":\"Mickael Poulhazan\",\"picture\":\"https://lh3.googleusercontent.com/a-/AOh14GgWGUXBzo2LTBPjeiislsUyoNCj3LttHTeBD_XkKw\",\"iss\":\"https://securetoken.google.com/locapp-c4de3\",\"aud\":\"locapp-c4de3\",\"auth_time\":1587801852,\"user_id\":\"JqjUXwUdhQQ3KxtZlHh585rh6OU2\",\"sub\":\"JqjUXwUdhQQ3KxtZlHh585rh6OU2\",\"iat\":1588416707,\"exp\":1588420307,\"email\":\"mickael.poulhazan@gmail.com\",\"email_verified\":true,\"firebase\":{\"identities\":{\"google.com\":[\"109641557156042866723\"],\"email\":[\"mickael.poulhazan@gmail.com\"]},\"sign_in_provider\":\"google.com\"},\"uid\":\"JqjUXwUdhQQ3KxtZlHh585rh6OU2\"}"}
+[info] >  End decode token {"user":"End decode token"}
+[info] >  ===> Add new basket {"user":"===> Add new basket"}
+[info] >  { {"user":"{"}
+[info] >      id: 1, {"user":"    id: 1,"}
+[info] >      title: "test", {"user":"    title: \"test\","}
+[info] >      decription: "Test description", {"user":"    decription: \"Test description\","}
+[info] >      image: null, {"user":"    image: null,"}
+[info] >      seller: "123", {"user":"    seller: \"123\","}
+[info] >      price: 12, {"user":"    price: 12,"}
+[info] >      priceBeforeReduction: 12, {"user":"    priceBeforeReduction: 12,"}
+[info] >      creationDate: 1588337895, {"user":"    creationDate: 1588337895,"}
+[info] >      collectStartDate: 1588337895, {"user":"    collectStartDate: 1588337895,"}
+[info] >      collectEndDate: 1588337895, {"user":"    collectEndDate: 1588337895,"}
+[info] >      collectCenter: null, {"user":"    collectCenter: null,"}
+[info] >      isOrganic: true, {"user":"    isOrganic: true,"}
+[info] >      isVeggie: true, {"user":"    isVeggie: true,"}
+[info] >      status: "available", {"user":"    status: \"available\","}
+[info] >      content: null {"user":"    content: null"}
+[info] >  } {"user":"}"}
+[info] >  { {"user":"{"}
+[info] >      id: 1, {"user":"    id: 1,"}
+[info] >      title: "test", {"user":"    title: \"test\","}
+[info] >      decription: "Test description", {"user":"    decription: \"Test description\","}
+[info] >      image: null, {"user":"    image: null,"}
+[info] >      seller: "123", {"user":"    seller: \"123\","}
+[info] >      price: 12, {"user":"    price: 12,"}
+[info] >      priceBeforeReduction: 12, {"user":"    priceBeforeReduction: 12,"}
+[info] >      creationDate: 1588337895, {"user":"    creationDate: 1588337895,"}
+[info] >      collectStartDate: 1588337895, {"user":"    collectStartDate: 1588337895,"}
+[info] >      collectEndDate: 1588337895, {"user":"    collectEndDate: 1588337895,"}
+[info] >      collectCenter: null, {"user":"    collectCenter: null,"}
+[info] >      isOrganic: true, {"user":"    isOrganic: true,"}
+[info] >      isVeggie: true, {"user":"    isVeggie: true,"}
+[info] >      status: "available", {"user":"    status: \"available\","}
+[info] >      content: null {"user":"    content: null"}
+[info] >  } {"user":"}"}
+[warn] ⚠  External network resource requested!
+   - URL: "http://169.254.169.254/computeMetadata/v1/instance"
+ - Be careful, this may be a production service.
+[warn] ⚠  External network resource requested!
+   - URL: "http://metadata.google.internal./computeMetadata/v1/instance"
+ - Be careful, this may be a production service.
+[info] i  functions: Finished "root" in ~1s
+[debug] [2020-05-02T11:17:35.491Z] [worker-root-83c0b181-393d-4bed-bac2-7d03aa0cbfbe]: IDLE 
+[debug] [2020-05-02T11:17:35.491Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  =====> Error when add basket Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information. {"user":"=====> Error when add basket Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information."}
+[info] >      at GoogleAuth.getApplicationDefaultAsync (/home/vagrant/projects/POC/locapp-back/functions/node_modules/google-auth-library/build/src/auth/googleauth.js:160:19) {"user":"    at GoogleAuth.getApplicationDefaultAsync (/home/vagrant/projects/POC/locapp-back/functions/node_modules/google-auth-library/build/src/auth/googleauth.js:160:19)"}
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7) {"user":"    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+[info] >  (node:2257) UnhandledPromiseRejectionWarning: #<Object> {"user":"(node:2257) UnhandledPromiseRejectionWarning: #<Object>"}
+[info] >  (node:2257) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4) {"user":"(node:2257) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)"}
+[info] >  (node:2257) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code. {"user":"(node:2257) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code."}
