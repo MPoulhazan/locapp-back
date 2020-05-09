@@ -60,10 +60,10 @@ app.use(cors());
 app.options("*", cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-console.log('====> Start decode token')
+console.log('Start decode token')
 app.use(validateFirebaseIdToken);
 
-console.log('====> Token ok')
+console.log('Token ok')
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

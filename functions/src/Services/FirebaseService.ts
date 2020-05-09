@@ -53,18 +53,20 @@ class FirebaseService {
 
     let basket: Basket;
     try {
-    basket = JSON.parse(req.body.replace(/(\r\n|\n|\r)/gm, ""));    // Remove line break for Parsing Json
-} catch (error) {
-    return Promise.reject({
-        status: 500,
-        message: error
-      });
-  }
-
+        basket = req.body;    // TODO: Remove line break for Parsing Json, to delete when unmock
+    } catch (error) {
+        console.log('Unexpected error while adding basket : ', error);
+        return Promise.reject({
+            status: 500,
+            message: error
+        });
+    }
+    
     const ref = db.collection("baskets").add(basket);
 
     ref
       .catch(error => {
+        console.log('Unable to save basket ', error);
         return Promise.reject({
           status: 500,
           message: error

@@ -18,6 +18,7 @@ export const post = async (req: Request, res: Response) => {
             message: responseSatus.message
         });
     } catch (error) {
+        console.log('Unable to add new Basket : ', error);
         res.status(error.status).json({
             message: error.message
         });
