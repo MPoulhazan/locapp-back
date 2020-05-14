@@ -3,7 +3,6 @@ import { Request } from "express";
 import * as admin from "firebase-admin";
 import { db } from "../db";
 import { ResponseStatus } from "../Models/ResponseStatus/ResponseStatus";
-import { Basket } from "../Models/Basket/Basket";
 
 class FirebaseService {
   static readonly STORAGE_PUBLIC_URL =
@@ -28,13 +27,13 @@ class FirebaseService {
 
   /**
    * Add a basket
-   * post on /baskets/
+   * post on /{collection}/
    * @param base64files
    * @param ref
    * Return status and message
    *
    */
-  async addBasket(req: Request): Promise<ResponseStatus> {
+  async addObject(req: Request, collection: string): Promise<ResponseStatus> {
     const uid = await this.getUserIdFromRequest(req);
 
     if (!uid) {
@@ -51,22 +50,22 @@ class FirebaseService {
       });
     }
 
-    let basket: Basket;
+    let object: Object;
     try {
-        basket = req.body;    // TODO: Remove line break for Parsing Json, to delete when unmock
+        object = req.body;    // TODO: Remove line break for Parsing Json, to delete when unmock
     } catch (error) {
-        console.log('Unexpected error while adding basket : ', error);
+        console.log(`Unexpected error while adding object to collection ${collection} : `, error);
         return Promise.reject({
             status: 500,
             message: error
         });
     }
     
-    const ref = db.collection("baskets").add(basket);
+    const ref = db.collection(collection).add(object);
 
     ref
       .catch(error => {
-        console.log('Unable to save basket ', error);
+        console.log('Unable to save objet ', error);
         return Promise.reject({
           status: 500,
           message: error
@@ -76,6 +75,44 @@ class FirebaseService {
     return Promise.resolve({
       status: 200,
       message: "success"
+    });
+  }
+
+
+  /**
+   * Get from collection
+   * get on /{collection}/
+   * @param base64files
+   * @param ref
+   * Return status and message
+   *
+   */
+  async getAllObjects(req: Request, collection: string): Promise<ResponseStatus> {
+    const uid = await this.getUserIdFromRequest(req);
+
+    if (!uid) {
+      return Promise.reject({
+        status: 401,
+        message: "Unauthorized user"
+      });
+    }
+   
+    const objectsToReturn: object[] = [];
+    await db.collection(collection).get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            objectsToReturn.push(doc.data())
+        });
+        return objectsToReturn;
+        }, error => {
+            return Promise.reject({
+                status: 500,
+                message: error
+            });
+        });
+
+    return Promise.resolve({
+      status: 200,
+      message: JSON.stringify(objectsToReturn)
     });
   }
 

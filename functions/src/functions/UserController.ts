@@ -37,8 +37,11 @@ export const deleteUser = functions.auth.user().onDelete(user => {
 export const getAuthentifiedUser = async (req: Request, res: Response) => {
   const userId = await FirebaseService.getUserIdFromRequest(req);
   if (!userId) {
+      console.log('UserId not found')
     return Promise.reject(null);
   }
+
+  console.log('Get user with id ', userId)
 
   return await db
     .collection("users")

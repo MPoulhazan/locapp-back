@@ -3,6 +3,8 @@ import FirebaseService from "../Services/FirebaseService";
 
 import { ResponseStatus } from "../Models/ResponseStatus/ResponseStatus";
 
+
+export const BASKET_INDEX_NAME = "baskets";
 /**
  * function -> Add a basket
  * get /baskets
@@ -11,8 +13,9 @@ import { ResponseStatus } from "../Models/ResponseStatus/ResponseStatus";
 export const post = async (req: Request, res: Response) => {
     console.log('Add new basket');
     try {
-        const responseSatus: ResponseStatus = await FirebaseService.addBasket(
-            req
+        const responseSatus: ResponseStatus = await FirebaseService.addObject(
+            req,
+            BASKET_INDEX_NAME
         );
         res.status(responseSatus.status).json({
             message: responseSatus.message
@@ -33,15 +36,15 @@ export const post = async (req: Request, res: Response) => {
  */
 
 export const getAllBaskets = async (req: Request, res: Response) => {
-    //   try {
-    //     const responseSatus: ResponseStatus = await FirebaseService.getAllBaskets(req);
-    //     return res.status(responseSatus.status).json({
-    //       message: responseSatus.message
-    //     });
-    //   } catch (error) {
-    //     return res.status(error.status).json({
-    //       message: error.message
-    //     });
-    //   }
+      try {
+        const responseSatus: ResponseStatus = await FirebaseService.getAllObjects(req, BASKET_INDEX_NAME);
+        return res.status(responseSatus.status).json({
+          message: responseSatus.message
+        });
+      } catch (error) {
+        return res.status(error.status).json({
+          message: error.message
+        });
+      }
 };
 
