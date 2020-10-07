@@ -1,5 +1,7 @@
+import { Basket } from './../Models/Basket/Basket';
 import { Request, Response } from "express";
 import FirebaseService from "../Services/FirebaseService";
+import { db } from "../db";
 
 import { ResponseStatus } from "../Models/ResponseStatus/ResponseStatus";
 
@@ -36,15 +38,78 @@ export const post = async (req: Request, res: Response) => {
  */
 
 export const getAllBaskets = async (req: Request, res: Response) => {
-      try {
-        const responseSatus: ResponseStatus = await FirebaseService.getAllObjects(req, BASKET_INDEX_NAME);
-        return res.status(responseSatus.status).json({
-          message: responseSatus.message
+    try {
+        const data = await db.collection('baskets').get().then(data => {
+            return data.docs.map(doc => doc.data() as Basket);
         });
-      } catch (error) {
+
+        return res.status(200).json({
+            data
+        });
+    } catch (error) {
         return res.status(error.status).json({
-          message: error.message
+            message: error.message
         });
-      }
+    }
 };
+
+
+/**
+ * function -> get all baskets
+ * get /baskets/:id
+ */
+
+export const getBasketById = async (req: Request, res: Response) => {
+    const id: number = +req.params.id;
+
+    console.log(`Get a basket with id ${id}`);
+
+    try {
+        const basketCollection = db.collection('baskets');
+        const basket = await basketCollection.where('id', '==', id).get().then(bk => {
+            return bk.docs.map(doc => doc.data() as Basket)[0];
+        });
+
+        if (!basket) {
+            return res.status(204).send();
+        }
+
+        return res.status(200).json(
+            basket
+        );
+
+    } catch (error) {
+        return res.status(error.status).json({
+            message: error.message
+        });
+    }
+};
+
+
+/**
+ * Return all baskets
+ * @param req
+ * @param res
+ */
+// export const getAllBaskets = async (req: Request, res: Response) => {
+//     const userId = await FirebaseService.getUserIdFromRequest(req);
+//     if (!userId) {
+//       return Promise.reject(null);
+//     }
+
+//     return await db
+//       .collection(BASKET_INDEX_NAME)
+//       .doc(userId)
+//       .get()
+//       .then(async data => {
+//         return await res.status(200).json(data.data());
+//       })
+//       .catch(error => {
+//         return res.status(error.code).json({
+//           message: `Something went wrong. ${error.message}`
+//         });
+//       });
+//   };
+
+
 

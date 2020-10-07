@@ -98,18 +98,8 @@ class FirebaseService {
     }
    
     const objectsToReturn: object[] = [];
-    await db.collection(collection).get().then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            objectsToReturn.push(doc.data())
-        });
-        return objectsToReturn;
-        }, error => {
-            return Promise.reject({
-                status: 500,
-                message: error
-            });
-        });
-
+    await db.collection(collection).get().then();
+   
     return Promise.resolve({
       status: 200,
       message: JSON.stringify(objectsToReturn)

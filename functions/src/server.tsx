@@ -16,43 +16,43 @@ const app = express();
 // `Authorization: Bearer <Firebase ID Token>`.
 // when decoded successfully, the ID Token content will be added as `req.user`.
 const validateFirebaseIdToken = async (req: any, res: any, next: any) => {
-  if (
-    (!req.headers.authorization ||
-      !req.headers.authorization.startsWith("Bearer ")) &&
-    !(req.cookies && req.cookies.__session)
-  ) {
-    res.status(403).send("Unauthorized: Authorization not found");
-    return;
-  }
+    if (
+        (!req.headers.authorization ||
+            !req.headers.authorization.startsWith("Bearer ")) &&
+        !(req.cookies && req.cookies.__session)
+    ) {
+        res.status(403).send("Unauthorized: Authorization not found");
+        return;
+    }
 
-  let idToken;
-  if (
-    req.headers.authorization &&
-    req.headers.authorization.startsWith("Bearer ")
-  ) {
-    // Read the ID Token header.
-    idToken = req.headers.authorization.split("Bearer ")[1];
-  } else if (req.cookies) {
-    // Read the ID Token from cookie.
-    idToken = req.cookies.__session;
-  } else {
-    // No cookie
-    res.status(403).send("Unauthorized: No cookie");
-    return;
-  }
+    let idToken;
+    if (
+        req.headers.authorization &&
+        req.headers.authorization.startsWith("Bearer ")
+    ) {
+        // Read the ID Token header.
+        idToken = req.headers.authorization.split("Bearer ")[1];
+    } else if (req.cookies) {
+        // Read the ID Token from cookie.
+        idToken = req.cookies.__session;
+    } else {
+        // No cookie
+        res.status(403).send("Unauthorized: No cookie");
+        return;
+    }
 
-  try {
-      console.log('Try Decode token');
-    const decodedIdToken = await firebaseAdmin.auth().verifyIdToken(idToken);
-    req.user = decodedIdToken;
-    next();
-    console.log('End decode token');
-    return;
-  } catch (error) {
-    // Unauthorized
-    res.status(403).send("Unauthorized: Invalid token");
-    return;
-  }
+    try {
+        console.log('Try Decode token');
+        const decodedIdToken = await firebaseAdmin.auth().verifyIdToken(idToken);
+        req.user = decodedIdToken;
+        next();
+        console.log('End decode token');
+        return;
+    } catch (error) {
+        // Unauthorized
+        res.status(403).send("Unauthorized: Invalid token");
+        return;
+    }
 };
 
 app.use(cors());
@@ -64,18 +64,19 @@ app.use(validateFirebaseIdToken);
 
 console.log('Token ok')
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
 });
 
 console.log('Prepare Apis');
 app.get("/users/me", UserController.getAuthentifiedUser);
-app.get("/baskets", BasketController.getAllBaskets);        // TODO
+app.get("/baskets/:id", BasketController.getBasketById);
+app.get("/baskets", BasketController.getAllBaskets);
 app.post("/baskets", BasketValidator, BasketController.post);
 
 export const root = functions.https.onRequest(app);
