@@ -39,8 +39,8 @@ export const post = async (req: Request, res: Response) => {
 
 export const getAllBaskets = async (req: Request, res: Response) => {
     try {
-        const data = await db.collection('baskets').get().then(data => {
-            return data.docs.map(doc => doc.data() as Basket);
+        const data = await db.collection('baskets').get().then(bkts => {
+            return bkts.docs.map(doc => doc.data() as Basket);
         });
 
         return res.status(200).json({
@@ -74,9 +74,9 @@ export const getBasketById = async (req: Request, res: Response) => {
             return res.status(204).send();
         }
 
-        return res.status(200).json(
-            basket
-        );
+        return res.status(200).json({
+            data: basket
+        });
 
     } catch (error) {
         return res.status(error.status).json({
